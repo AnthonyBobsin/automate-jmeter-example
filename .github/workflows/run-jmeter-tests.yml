@@ -4,7 +4,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run JMeter Tests
-        uses: QAInsights/PerfAction@3.1
+        uses: QAInsights/PerfAction@v3.1
         with:
           test-plan-path: ./jmeter-files/test-plan.jmx
           args: ""
