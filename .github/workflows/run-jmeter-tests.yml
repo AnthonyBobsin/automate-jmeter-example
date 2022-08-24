@@ -1,6 +1,6 @@
 on: [push]
 jobs:
-  Run Tests:
+  Main:
     runs-on: ubuntu-latest
     steps:
       - name: Run JMeter Tests
