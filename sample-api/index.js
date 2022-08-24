@@ -4,34 +4,53 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = 6060;
 
+const withRandomSleep = (min, max, cb) => {
+  const sleep = Math.floor(Math.random() * (max - min + 1) + min);
+  setTimeout(cb, sleep);
+};
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get('/', (_, res) => {
-  res.send('Hello World!');
+  withRandomSleep(500, 1500, () => {
+    res.send('Hello World!');
+  });
 });
 
 app.post('/login', (_, res) => {
-  res.json({
-    success: true,
-    message: 'User logged in successfully',
+  withRandomSleep(1000, 3200, () => {
+    res.json({
+      success: true,
+      message: 'User logged in successfully',
+    });
+  });
+});
+
+app.post('/search', (_, res) => {
+  withRandomSleep(750, 2500, () => {
+    res.json({
+      success: true,
+      message: 'Search completed successfully',
+    });
   });
 });
 
 app.post('/cart/item', (_, res) => {
-
-
-  res.json({
-    success: true,
-    message: 'Item added to cart',
+  withRandomSleep(750, 1750, () => {
+    res.json({
+      success: true,
+      message: 'Item added to cart',
+    });
   });
 });
 
 app.post('/checkout', (req, res) => {
-
-  res.json({
-    success: true,
-    message: 'Order created',
+  withRandomSleep(1500, 4500, () => {
+    res.json({
+      success: true,
+      message: 'Order created',
+    });
   });
 });
 
