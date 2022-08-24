@@ -1,0 +1,19 @@
+on: [push]
+jobs:
+  Run Tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run JMeter Tests
+        uses: QAInsights/PerfAction@3.1
+        with:
+          test-plan-path: ./jmeter-files/test-plan.jmx
+          args: ""
+      - name: Upload Results
+        uses: actions/upload-artifact@v2
+        with:
+          name: jmeter-results
+          path: result.jtl
+      # - name: Install Latency Lingo
+      #   run: 
+      # - name: Publish to Latency Lingo
+      #   run: 
