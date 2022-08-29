@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash -e
 
 # This script is used to publish the test results to Latency Lingo.
 
