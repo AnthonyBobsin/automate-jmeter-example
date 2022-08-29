@@ -7,7 +7,7 @@ curl -L https://github.com/AnthonyBobsin/latency-lingo-cli/releases/download/v1.
 
 # Invoke the CLI with our results file
 ./latency-lingo-cli publish \
-  --file $WORKSPACE/kpi.jtl \
+  --file $JTL_RESULT_FILE \
   --api-key $LATENCY_LINGO_API_KEY \
   --label 'Checkout Flow Jenkins' \
   --env development
