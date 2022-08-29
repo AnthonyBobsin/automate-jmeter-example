@@ -15,7 +15,7 @@ jobs:
           name: jmeter-results
           path: result.jtl
       - name: Install Latency Lingo
-        run: curl -L https://github.com/AnthonyBobsin/latency-lingo-cli/releases/download/v1.3.0/latency-lingo-cli_1.3.0_Linux_x86_64.tar.gz | tar -xz
+        run: curl -L https://github.com/AnthonyBobsin/latency-lingo-cli/releases/download/v1.3.1/latency-lingo-cli_1.3.1_Linux_x86_64.tar.gz | tar -xz
       - name: Publish to Latency Lingo
         run: ./latency-lingo-cli publish --file result.jtl --api-key $LATENCY_LINGO_API_KEY --label 'Checkout Flow Automated Test Plan'
         env:
