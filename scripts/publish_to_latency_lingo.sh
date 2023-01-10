@@ -3,7 +3,7 @@
 # This script is used to publish the test results to Latency Lingo.
 
 # Install Latency Lingo
-curl -L https://github.com/AnthonyBobsin/latency-lingo-cli/releases/latest/download/latency-lingo-cli_Darwin_x86_64.tar.gz | tar -xz
+curl -L https://github.com/latency-lingo/cli/releases/latest/download/latency-lingo-cli_darwin_amd64.tar.gz | tar -xz
 
 # Invoke the CLI with our results file
 ./latency-lingo-cli publish \
